@@ -53,10 +53,7 @@ const Navbar = () => {
         <NavbarItem to={ROUTES_PATH_ROOT} $active={isActive(ROUTES_PATH_ROOT)}>
           안내
         </NavbarItem>
-        <NavbarItem
-          to={ROUTES_PATH_USERS}
-          $active={isActive(ROUTES_PATH_USERS)}
-        >
+        <NavbarItem to={ROUTES_PATH_USERS} $active={isActive(ROUTES_PATH_USERS)}>
           과제
         </NavbarItem>
       </NavbarItems>

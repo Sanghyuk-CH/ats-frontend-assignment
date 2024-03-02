@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 // button 태그와 동일하게 사용할 수 있습니다.
 export const Button = styled.button`
   appearance: none;
-  background-color: #FAFBFC;
+  background-color: #fafbfc;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   box-sizing: border-box;
-  color: #24292E;
+  color: #24292e;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -26,18 +26,18 @@ export const Button = styled.button`
   white-space: nowrap;
   word-wrap: break-word;
   &:hover {
-    background-color: #F3F4F6;
+    background-color: #f3f4f6;
     text-decoration: none;
     transition-duration: 0.1s;
   }
   &:disabled {
-    background-color: #FAFBFC;
+    background-color: #fafbfc;
     border-color: rgba(27, 31, 35, 0.15);
-    color: #959DA5;
+    color: #959da5;
     cursor: default;
   }
   &:active {
-    background-color: #EDEFF2;
+    background-color: #edeff2;
     box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
     transition: none 0s;
   }
@@ -48,28 +48,28 @@ export const Button = styled.button`
 
 // input 태그와 동일하게 사용할 수 있습니다.
 export const Input = styled.input`
-    padding: 5px 12px;
-    font-size: 14px;
-    vertical-align: middle;
-    border: 1px solid #d0d7de;
-    border-radius: 6px;
-    box-shadow: inset 0 1px 0 rgba(208,215,222,0.2);
-    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
-    transition-property: color,background-color,box-shadow,border-color;
-    line-height: 18px;
+  padding: 5px 12px;
+  font-size: 14px;
+  vertical-align: middle;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(208, 215, 222, 0.2);
+  transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+  transition-property: color, background-color, box-shadow, border-color;
+  line-height: 18px;
 `;
 
 // Select 태그와 동일하게 사용할 수 있습니다.
 export const Select = styled.select`
-    padding: 5px 12px;
-    font-size: 14px;
-    vertical-align: middle;
-    background-color: #f6f8fa;
-    border: 1px solid #d0d7de;
-    border-radius: 6px;
-    box-shadow: inset 0 1px 0 rgba(208,215,222,0.2);
-    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
-    transition-property: color,background-color,box-shadow,border-color;
+  padding: 5px 12px;
+  font-size: 14px;
+  vertical-align: middle;
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(208, 215, 222, 0.2);
+  transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+  transition-property: color, background-color, box-shadow, border-color;
 `;
 
 // <StatusCircle $color={color} /> 와 같이 사용할 수 있습니다.
@@ -101,7 +101,8 @@ export const StatisticsItem = styled.div`
   gap: 32px;
   padding: 32px;
   border-radius: 6px;
-  box-shadow: 0 0 0 1px rgba(53,72,91,.14), 0 3px 2px rgba(0,0,0,.04), 0 7px 5px rgba(0,0,0,.02), 0 13px 10px rgba(0,0,0,.02), 0 22px 17px rgba(0,0,0,.02);
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.14), 0 3px 2px rgba(0, 0, 0, 0.04), 0 7px 5px rgba(0, 0, 0, 0.02),
+    0 13px 10px rgba(0, 0, 0, 0.02), 0 22px 17px rgba(0, 0, 0, 0.02);
   background-color: #fff;
   flex: 1;
 
@@ -109,13 +110,13 @@ export const StatisticsItem = styled.div`
     color: #0969da;
   }
   &:nth-child(2) > p {
-    color: #8250DF;
+    color: #8250df;
   }
   &:nth-child(3) > p {
-    color: #9A6700;
+    color: #9a6700;
   }
   &:nth-child(4) > p {
-    color: #1A7F37;
+    color: #1a7f37;
   }
 `;
 
@@ -124,7 +125,7 @@ export const StatisticsItem = styled.div`
 // StatisticsItem 컴포넌트 내부에서 사용합니다.
 export const StatisticsTitle = styled.h3`
   font-size: 20px;
-  color: #1F2328;
+  color: #1f2328;
   margin: 0;
 `;
 
@@ -134,7 +135,7 @@ export const StatisticsTitle = styled.h3`
 export const StatisticsValue = styled.p`
   font-size: 32px;
   font-weight: 600;
-  color: #1F2328;
+  color: #1f2328;
   margin: 0;
 `;
 
@@ -167,7 +168,7 @@ export const Table = styled.table`
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: 600;
-  color: #1F2328;
+  color: #1f2328;
   margin: 0;
 `;
 
@@ -176,6 +177,6 @@ export const Title = styled.h1`
 export const Label = styled.label`
   font-size: 14px;
   font-weight: 600;
-  color: #1F2328;
+  color: #1f2328;
   margin: 0;
 `;

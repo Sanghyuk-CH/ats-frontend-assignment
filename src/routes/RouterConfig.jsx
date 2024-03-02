@@ -10,8 +10,8 @@ export default function RouterConfig() {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: 1000 * 60 * 5, // 5분
-        gcTime: 1000 * 60 * 10, // 10분
+        staleTime: 0, // 0
+        gcTime: 1000 * 60 * 5, // 5분
         refetchOnWindowFocus: false,
       },
     },
