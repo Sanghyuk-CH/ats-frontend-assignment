@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "active",
+    "color": "#40C463"
+  },
+  {
+    "id": 2,
+    "name": "inactive",
+    "color": "#EBEDF0"
+  }
+]
