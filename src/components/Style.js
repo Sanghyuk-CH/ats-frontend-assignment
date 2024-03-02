@@ -143,10 +143,15 @@ export const StatisticsValue = styled.p`
 // 사용자 목록을 나타내는 테이블입니다.
 export const Table = styled.table`
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   thead {
     border-bottom: 1px solid #d0d7de;
+  }
+  tbody {
+    height: calc(100% - 70.5px - 220px);
+    overflow-y: auto;
   }
   th {
     text-align: left;
