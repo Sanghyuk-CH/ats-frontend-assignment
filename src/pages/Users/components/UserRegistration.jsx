@@ -7,17 +7,19 @@ import { useNavigate } from 'react-router-dom';
 
 export default function UserRegistration() {
   const navigate = useNavigate();
-  const [roleState, setRoleState] = useState(0);
-  const [emailInput, setEmailInput] = useState('');
-  const [nameInput, setNameInput] = useState('');
+  const [role, setRole] = useState(0);
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [emailDomain, setEmailDomain] = useState('atlasnetworks.co.kr');
+
   const { data: roles } = useQuery({
     queryKey: ['roles'],
     queryFn: () => getRoles(),
   });
+
   const { mutate: registrationUser } = useMutation({
     mutationFn: async () => {
-      return await postUser({ name: nameInput, email: emailInput, role: roleState });
+      return await postUser({ name, email, role });
     },
     onSuccess: (data) => {
       navigate('/users');
@@ -27,6 +29,12 @@ export default function UserRegistration() {
       window.alert(error);
     },
   });
+
+  const handleRegistration = () => {
+    const completeEmail = `${email}@${emailDomain}`;
+    registrationUser({ name, email: completeEmail, role });
+  };
+
   return (
     <RegistrationContainer>
       <Box>
@@ -38,7 +46,7 @@ export default function UserRegistration() {
         <Input
           placeholder='사용자의 이름을 입력하세요.'
           onChange={(e) => {
-            setNameInput(e.target.value);
+            setName(e.target.value);
           }}
         />
       </Box>
@@ -48,7 +56,7 @@ export default function UserRegistration() {
           <Input
             placeholder='Email을 입력하세요.'
             onChange={(e) => {
-              setEmailInput(e.target.value);
+              setEmail(e.target.value);
             }}
           />
           &nbsp;@&nbsp;
@@ -65,13 +73,13 @@ export default function UserRegistration() {
         <Label>권한</Label>
         <Select
           onChange={(e) => {
-            setRoleState(+e.target.value);
+            setRole(+e.target.value);
           }}
         >
           <option value='0'>권한 전체</option>
           {roles &&
-            roles.map((role, index) => (
-              <option key={index} value={role.id}>
+            roles.map((role) => (
+              <option key={`${role.id}-${role.name}`} value={role.id}>
                 {role.name}
               </option>
             ))}
@@ -85,13 +93,7 @@ export default function UserRegistration() {
         >
           취소
         </Button>
-        <Button
-          onClick={() => {
-            registrationUser();
-          }}
-        >
-          추가
-        </Button>
+        <Button onClick={handleRegistration}>추가</Button>
       </ButtonContainer>
     </RegistrationContainer>
   );
